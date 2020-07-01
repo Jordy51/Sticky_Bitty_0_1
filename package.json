@@ -1,7 +1,7 @@
 {
   "name": "chitty_bitty",
   "version": "1.0.0",
-  "description": "Just a project",
+  "description": "Something like Google Keep",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
