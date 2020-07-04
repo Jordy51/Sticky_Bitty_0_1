@@ -15,6 +15,6 @@ const NoteSchema = new mongoose.Schema({
     }
 })
 
-const Note = mongoose.model('Card', NoteSchema);
+const Note = mongoose.model('Note', NoteSchema);
 
 module.exports = Note;

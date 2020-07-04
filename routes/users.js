@@ -32,7 +32,7 @@ router.get('/register', (req, res) => res.render('register'));
 // Register Handle
 router.post('/register',(req, res)=> {
     const { name, email, password, password2 } = req.body;
-    let errors= [];
+    let errors = [];
 
     // Check required fields
     if(!name || !email || !password || !password2) {
