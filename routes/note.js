@@ -5,6 +5,9 @@ const router = express.Router();
 // Note Model
 const Note =  require('../models/Note');
 
+// View Note
+router.get('/notes', ensureAuthenticated, (req, res) => res.render('notes'))
+
 // Create Note
 router.get('/createNote', ensureAuthenticated, (req, res) => res.render('createNote'));
 
@@ -23,10 +26,10 @@ router.post('/createNote', ensureAuthenticated, (req, res) => {
     }
 
     const newNote = new Note({
-        title,
-        note
+        user: req.user,
+        title: title,
+        note: note
     });
-
     newNote.save()
         .then(note => {
             req.flash('success_msg', 'Your note has been saved');
