@@ -1,16 +1,16 @@
-<b><p class="lead mb-3">Welcome <%= name %></p></b>
-
-<a href="/notes" class="btn btn-secondary">Notes</a>
+<b><p class="lead mb-3" style="text-align: center;">Welcome <%= name %></p></b>
 
 <br>
 
+<% for(let i = 0; i < notes.length; i++) { %>
 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Title</div>
+    <div class="card-header"><%= notes[i].title %></div>
     <div class="card-body">
-      <p class="card-text">Note Note note</p>
+        <p class="card-text"><%= notes[i].note %></p>
     </div>
 </div>
+<% } %>
 
 <br>
 
-<button type="button" class="btn btn-primary" ><a href="/note/createNote"><h1>+</h1></a></button>
+<button type="button" class="btn btn-primary" style="align-items: center;" ><a href="/note/createNote"><h1 style="text-align: center; text-decoration-color: white;">+</h1></a></button>
