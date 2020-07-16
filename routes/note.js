@@ -5,14 +5,6 @@ const router = express.Router();
 // Note Model
 const Note =  require('../models/Note');
 
-// // View Note
-// router.get('/notes', ensureAuthenticated, (req, res) => {
-//     Note.find({ user: req.user.id }).exec((err, notes) => {
-//         console.log(notes);
-//         res.render('notes', { notes: notes } );
-//     })
-// })
-
 // Create Note
 router.get('/createNote', ensureAuthenticated, (req, res) => res.render('createNote'));
 
